@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% block body %}
+
+
+<div class="container">
+ <h1>{{ i.post.titlename }}</h1>
+	
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ object.image.url }}" alt="Card image cap">
+  <div class="card-body">
+ 
+    <a class="btn btn-outline-danger" href="{% url 'delete-image' object.id %}">Delete</a>
+  </div>
+</div>
+</div>
+{% endblock body %}

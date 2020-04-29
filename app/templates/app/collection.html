@@ -1,0 +1,47 @@
+  {% extends 'app/base2.html' %}
+  {% block content %}
+ 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  <!-- collection -->
+  <section class="bg-secondary py-4">
+    <div class="container-fluid">
+      <!-- title -->
+      <div class="row text-white text-center">
+        <div class="col m-4">
+          <h1 class="display-4 mb-4">Collection</h1>
+          <div class="underline mb-4"></div>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium inventore, sint quisquam fugiat pariatur culpa officia. Eveniet omnis quia tempora.</p>
+        </div>
+      </div>
+      <!-- end of title -->
+
+      
+        {% for post in posts %}
+        <div class="row">
+        <a href="{% url 'titledetail' post.id %}">
+        <div class="col-lg-4 col-sm-6 my-5">
+          <div class="card border-0 card-shadow">
+            <img src="{{ post.thumbnailimage.url }}" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">{{ post.titlename }}</h5>
+            </div>
+          </div>
+        </div>
+        </a>
+         </div>
+        {% endfor  %}
+       
+       
+       
+      
+     
+    </div>
+  </section>
+  <!-- end of collection -->
+     {% endblock content %}

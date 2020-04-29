@@ -1,0 +1,29 @@
+  {% extends 'app/base2.html' %}
+  {% block content %}
+ 
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+       {% for i in image %}
+        <a href="{% url 'image-detail' i.id %}">
+        <div class="col-lg-4 col-sm-6 my-5">
+          <div class="card border-0 card-shadow">
+            <img src="{{ i.image.url }}" class="card-img">
+           <!--  <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">{{ post.titlename }}</h5>
+            </div> -->
+          </div>
+        </div>
+        </a>
+        {% endfor  %}
+       
+       
+       
+      
+      </div>
+
+           {% endblock content %}
+           

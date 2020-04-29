@@ -1,0 +1,8 @@
+{% extends 'app/base.html' %}
+{% block body %}
+<form action="" method="POST">
+	{% csrf_token %}
+	<input type="submit" name="Comfirm" class="btn btn-sm btn-danger">
+	<a href="{% url 'home' %} " class="btn btn-sm btn-warning">cancel</a>
+</form>
+{% endblock body %}

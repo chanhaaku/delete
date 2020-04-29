@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+<body>
+
+	<div class="container">
+		
+
+	
+
+<div class="text-center">
+	<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form|crispy }}
+		{{ formset|crispy }}
+
+		 <button class="btn btn-outline-info" type="submit">Update</button>
+		
+	</form>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+</body>
+{% endblock body %}
